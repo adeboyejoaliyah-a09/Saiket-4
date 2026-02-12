@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Section Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Quiz</h2>
+    <button onclick="startQuiz('technology')">Technology</button>
+    <button onclick="startQuiz('psychology')">Psychology</button>
+    <button onclick="startQuiz('general')">General Knowledge</button>
+
+    <div class="timer">
+      ⏱ Time Left: <span id="time">60</span>s
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <h3   style="display: flex;">Task 4 | SAIKET SYSTEMS</h3>
+
+    <!-- QUIZ AREA -->
+    <div id="quizArea" class="hidden">
+
+      <div class="progress-container">
+        <div id="progressBar"></div>
+      </div>
+
+      <p id="progressText"></p>
+      <h2 id="question"></h2>
+
+      <form id="options"></form>
+
+      <div class="button-group">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+        <button id="submitBtn" class="hidden">Submit</button>
+      </div>
+
+    </div>
+
+    <!-- RESULT AREA -->
+    <div id="resultArea" class="hidden">
+      <h2>Quiz Result</h2>
+      <p id="scoreText"></p>
+      <button onclick="location.reload()">Restart Quiz</button>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
